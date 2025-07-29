@@ -42,11 +42,21 @@ print("Resultado da comparação de y e z com x:", x)
 y = (not x == z) # verifica se y é diferente de z
 print("Resultado da comparação de y e z com x:", y)
 
-idade = 21
+idade = 18
 altura = 1.50
-print("digite sua idade:")
-print("digite sua altura:")
-print('idade:', idade)  # Exibe a idade
-print('altura:', altura)  # Exibe a altura
-print('idade and altura:', idade and altura)  # Retorna a última expressão avaliada se ambas forem verdadeiras
+resultado = (idade >= 18) and (altura >= 1.60) # verifica se a pessoa é maior de idade e tem altura maior ou igual a 1.60
+print("Resultado da verificação de idade e altura:", str (resultado))
+msg = "você é maior atendeu aos requisitos e está apto a entrar no evento" if resultado else "você não atendeu aos requisitos e não está apto a entrar no evento"
+print(msg)
 
+irigador_sul = 'desligado'
+irigador_norte = 'desligado'
+registro = (irigador_sul == 'desligado') or (irigador_norte == 'desligado') # verifica se o irrigador sul está desligado e o norte aberto
+print("Resultado da verificação dos irrigadores:", str (registro))
+msg = "irigadores norte e sul estão desligados no momento" if registro else "irigadores norte e sul estão ligados no momento"
+print(msg)
+conta_bancaria = 1000
+conta_bancaria = not conta_bancaria
+print ("saldo da conta bancaria:", str (conta_bancaria))
+msg = "saldo da conta bancária está zerado" if conta_bancaria else "saldo da conta bancária tem dinheiro"
+print (msg)
